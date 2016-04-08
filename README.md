@@ -1,5 +1,7 @@
 # java-util
 
+Independent android support-v4 util as pure java project instead of android project.
+
 ## Installation
 
 ```gradle
