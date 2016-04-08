@@ -2,6 +2,10 @@
 
 Independent android support-v4 util as pure java project instead of android project.
 
+## Usage
+
+* java.util.LruCache
+
 ## Installation
 
 ```gradle
