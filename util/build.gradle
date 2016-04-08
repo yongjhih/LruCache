@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.3.4'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
+
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+}
+
+apply plugin: 'com.novoda.bintray-release'
+
+def getRepositoryUsername() {
+    return hasProperty('BINTRAY_USER') ? BINTRAY_USER : ""
+}
+
+def getRepositoryPassword() {
+    return hasProperty('BINTRAY_KEY') ? BINTRAY_KEY : ""
+}
+
+publish {
+    userOrg = 'yongjhih'
+    groupId = 'com.infstory'
+    artifactId = 'lrucache'
+    publishVersion = '1.0.0'
+    desc = 'LruCache'
+    website = 'https://github.com/yongjhih/LruCache'
+    bintrayUser = getRepositoryUsername()
+    bintrayKey = getRepositoryPassword()
+    dryRun = false
+}
+
+apply from: 'javadoc.gradle'
