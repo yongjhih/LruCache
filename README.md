@@ -1,4 +1,4 @@
-# LruCache
+# java-util
 
 ## Installation
 
@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.yongjhih:LruCache:1.0.0'
+    compile 'com.github.yongjhih:java-util:1.0.0'
 }
 ```
 

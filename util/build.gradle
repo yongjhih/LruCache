@@ -39,10 +39,10 @@ def getRepositoryPassword() {
 publish {
     userOrg = 'yongjhih'
     groupId = 'com.infstory'
-    artifactId = 'lrucache'
+    artifactId = 'java-util'
     publishVersion = '1.0.0'
-    desc = 'LruCache'
-    website = 'https://github.com/yongjhih/LruCache'
+    desc = 'java-util'
+    website = 'https://github.com/yongjhih/java-util'
     bintrayUser = getRepositoryUsername()
     bintrayKey = getRepositoryPassword()
     dryRun = false
